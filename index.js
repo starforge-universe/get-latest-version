@@ -9,7 +9,7 @@ exec(`git for-each-ref --sort=-creatordate --count 1 --format="%(refname:short)"
   if (err) {
     console.log('Tag not found: ', stderr);
     process.exit(1);
-  } else if (tag == '') {
+  } else if (tag === '') {
     tag = process.env.INPUT_DEFAULT
   }
 
