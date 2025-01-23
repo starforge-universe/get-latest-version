@@ -12,4 +12,4 @@ exec(`git for-each-ref --sort=-creatordate --count 1 --format="%(refname:short)"
 
   fs.appendFileSync(process.env.GITHUB_OUTPUT, `version=${tag}\n`);
   process.exit(0);
-}
+});
