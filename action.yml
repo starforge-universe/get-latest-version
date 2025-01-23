@@ -1,6 +1,9 @@
 name: 'Get latest version'
 description: 'Get latest version of the repository'
 inputs:
+  prefix:
+    description: 'Version number prefix'
+    required: false
   default:
     description: 'Default version number in case of version can''t be specified'
     required: true
