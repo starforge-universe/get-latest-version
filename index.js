@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const tagPrefix = `${process.env.INPUT_PREFIX || ''}*`;
 
-exec(`git for-each-ref --sort=-creatordate --count 1 --format="%(refname:short)" "refs/tags/${tagPrefix}"`, {cwd: null}, (err, tag, stderr) => {
+exec(`git fetch --tags origin && git for-each-ref --sort=-creatordate --count 1 --format="%(refname:short)" "refs/tags/${tagPrefix}"`, {cwd: null}, (err, tag, stderr) => {
   tag = tag.trim();
   console.log(`tag: ${tag}`)
 
