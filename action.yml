@@ -1,0 +1,15 @@
+name: 'Get latest version'
+description: 'Get latest version of the repository'
+inputs:
+  prefix:
+    description: 'Version number prefix'
+    required: false
+  default:
+    description: 'Default version number in case of version can''t be specified'
+    required: true
+outputs:
+  version:
+    description: 'Result of version number specification'
+runs:
+  using: 'node20'
+  main: 'index.js'
